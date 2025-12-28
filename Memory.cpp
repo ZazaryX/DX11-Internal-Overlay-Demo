@@ -1,0 +1,15 @@
+#include "MemoryDefs.h"
+
+Memory mem = {};
+
+Bases bases = {};
+
+uintptr_t BaseAddr = 0x00048184;
+std::string patternCD = "F2 ?? ?? 50 78 8B 45 F0 83 C4 10";
+std::string patternHP = "89 88 2C 01 ? ? 8B 55 0C";
+
+std::vector<unsigned int> MoneyOffsets = { 0x4B4,0x0,0x18,0x8,0x14,0xC4,0x2A4 };
+std::vector<unsigned int> RCOffsets = { 0x4AC,0x0,0x54,0x1C,0x18,0x68,0x354 };
+std::vector<unsigned int> TimeOffsets = { 0x4B0,0x0,0x58,0x60,0x20 };
+std::vector<unsigned int> KillsOffsets = { 0x6C0,0x0,0x18,0x1AC };
+std::vector<unsigned int> HPOffsets = { 0x6C0,0x0,0x18,0x68,0x12C };
